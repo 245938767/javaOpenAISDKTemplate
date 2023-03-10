@@ -24,6 +24,7 @@ public abstract class BaseOpenAIOperation implements OpenAIOperation {}
 - [ ] 在此项目的架构中不应该仅仅支持OpenAi，将来会出现各种各样的AI平台是否到时候也能适配呢（对架构在进行一次抽象）
 - [ ] 支持对不同平台的AI的密匙管理
 - [ ] 是否能够变成一个样板代码呢？公司对外开放的SDK可以基于此种逻辑直接生成Java的SDK
+- [ ] 是否能够加上代理，防止出现网络不好请求失败问题
 
 
 ## 怎么使用

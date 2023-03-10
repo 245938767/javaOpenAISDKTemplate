@@ -4,39 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b04090b3-6bd4-4b6c-8030-6697b73a53c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/exception/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/BaseOpenAIOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/OpenAICreate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/OpenAIExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/OpenAIOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/OpenAiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/chat/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/chat/ChatRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/completions/Completions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/completions/CompletionsRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/image/Images.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/image/ImagesRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/model/BaseEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/model/Choices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/model/OpenAIErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/model/Usage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/response/ImagesResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/response/ResponseModel.java" afterDir="false" />
+    <list default="true" id="b04090b3-6bd4-4b6c-8030-6697b73a53c6" name="Changes" comment="修复请求的数据结构">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/model/UrlData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xiao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/OpenAICreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/OpenAICreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/chat/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/chat/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/completions/Completions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/completions/Completions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/image/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/factory/image/Images.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xiao/response/ImagesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xiao/response/ImagesResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/lyq/Desktop/javaOpenAISDKTemplate/src/main/java/cn/xiao",
     "node.js.detected.package.eslint": "true",
@@ -97,6 +76,26 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/cn/xiao" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.xiao.Main" />
+      <module name="javaOpenAISDKTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.xiao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,5 +122,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修复请求的数据结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复请求的数据结构" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/xiao/Main.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

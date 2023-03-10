@@ -9,18 +9,16 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.TypeReference;
 import io.vavr.control.Try;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-@Slf4j
 public class Images<T> extends BaseOpenAIOperation implements OpenAIExecutor<T>, Post<T> {
     private ImagesRequestModel openAiRequest;
 
-    private Consumer<T> successHook = t -> log.info("save success");
+    private Consumer<T> successHook = t -> System.out.println("get success");
     private Consumer<? super Throwable> errorHook = e -> e.printStackTrace();
 
     public Images(Consumer<ImagesRequestModel> consumer) {
@@ -37,7 +35,8 @@ public class Images<T> extends BaseOpenAIOperation implements OpenAIExecutor<T>,
                     TypeReference<ImagesResponse> typeReference = new TypeReference<>() {
                     };
                     JSONObject jsonObject = JSON.parseObject(output);
-                    return jsonObject.<T>to(typeReference);
+                    T to = jsonObject.<T>to(typeReference);
+                    return to;
                 })
                 .onSuccess(successHook)
                 .onFailure(errorHook).getOrNull();

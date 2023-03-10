@@ -8,18 +8,16 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.TypeReference;
 import io.vavr.control.Try;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-@Slf4j
 public class Chat<T> extends BaseOpenAIOperation implements OpenAIExecutor<T>, Post<T> {
     private final ChatRequestModel openAiRequest = new ChatRequestModel();
 
-    private Consumer<T> successHook = t -> log.info("get success");
+    private Consumer<T> successHook = t -> System.out.println("get success");
     private Consumer<? super Throwable> errorHook = e -> e.printStackTrace();
 
     public Chat(Consumer<ChatRequestModel> consumer) {

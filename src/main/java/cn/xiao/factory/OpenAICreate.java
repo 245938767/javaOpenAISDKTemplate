@@ -7,6 +7,7 @@ import cn.xiao.factory.completions.Completions;
 import cn.xiao.factory.completions.CompletionsRequestModel;
 import cn.xiao.factory.image.Images;
 import cn.xiao.factory.image.ImagesRequestModel;
+import cn.xiao.response.ImagesResponse;
 import cn.xiao.response.ResponseModel;
 
 import java.util.function.Consumer;
@@ -32,7 +33,7 @@ public class OpenAICreate {
      * @param consumer
      * @return
      */
-    public static Post<ResponseModel> getImages(Consumer<ImagesRequestModel> consumer) {
+    public static Post<ImagesResponse> getImages(Consumer<ImagesRequestModel> consumer) {
         return new Images<>(consumer);
     }
 }
