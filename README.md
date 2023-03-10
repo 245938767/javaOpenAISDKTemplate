@@ -1,7 +1,7 @@
 # 基于OpenApi的接口基础封装
 
 ## 如何学习
-此项目架构是参考 **引用1** 中的一个链式方式，如果感觉看不懂可以通过两个项目的对比
+此项目架构是参考  [op-mybatis-spring-boot-starter.zip][1]中的一个链式调用方式，如果感觉看不懂可以通过两个项目的对比
 
 入口类：
 
@@ -33,7 +33,6 @@ public abstract class BaseOpenAIOperation implements OpenAIOperation {}
 
 ## 引用
 
-1. [op-mybatis-spring-boot-starter.zip]: https://gitee.com/only4playgroup/op-system-center	"一个教你在实际的项目中领域驱动实际的落地以及代码编写方式"
+[1]: https://gitee.com/only4playgroup/op-system-center	"一个教你在实际的项目中领域驱动实际的落地以及代码编写方式"
 
-2. [OpenAI]: https://platform.openai.com/docs/api-reference/introduction "API官网"
-
+[2]: https://platform.openai.com/docs/api-reference/introduction "OpenAI API官网"
